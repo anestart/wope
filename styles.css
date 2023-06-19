@@ -134,6 +134,11 @@
         letter-spacing: 0.05em;
     }
 
+    .btn:hover {
+        letter-spacing: 4px;
+        background-color: #5A3FDF;
+    }
+
     .hero-container .circle-text {
         width: 120px;
         position: absolute;
@@ -163,8 +168,41 @@
     .hero-media a {
         display: inline-block;
         margin: 0 auto;
-        
     }
+
+    .hero-media a img {
+        cursor: pointer;
+    }
+
+   .mkt-banner {
+        background-color: var(--color-gray); 
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 80px 24px;
+   }
+
+   .mkt-banner .mkt-banner--item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .mkt-banner .mkt-banner--item img {
+    width: auto;
+    height: 58px;
+    margin-right: 16px;
+   }
+
+   .mkt-banner .mkt-banner--item p {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.87em;
+    line-height: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+   }
+
+   
 
     
     }
