@@ -34,7 +34,7 @@
 
     header.sticky {
         background-color: var(--color-white);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
         padding: 20px;
     }
 
@@ -77,7 +77,6 @@
         position: relative;
         min-width: 100%;
         height: 320px;    
-        
     }
 
     .hero-image img {
@@ -145,7 +144,6 @@
         height: auto;
         bottom: 0%;
         left: 200px;
-        
     }
 
     .hero-container .circle-text img {
@@ -179,28 +177,106 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: 80px 24px;
+        padding: 48px 24px;
+        margin-top: 32px;
    }
 
    .mkt-banner .mkt-banner--item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
    }
 
    .mkt-banner .mkt-banner--item img {
-    width: auto;
-    height: 58px;
-    margin-right: 16px;
+        width: auto;
+        height: 58px;
+        margin-right: 16px;
    }
 
    .mkt-banner .mkt-banner--item p {
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 0.87em;
-    line-height: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
+        color: var(--color-black);
+        font-family: 'Anonymous Pro', monospace;
+        font-size: 0.87em;
+        line-height: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
    }
+
+   .benefits {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 40px;
+   }
+
+   .title {
+        color: var(--color-black);
+        font-family: 'Anonymous Pro', monospace;
+        font-size: 1.75em;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+   }
+
+   .benefits p {
+        color: var(--color-black);
+        font-size: 0.75em;
+        font-weight: 400;
+        line-height: 1.8em;
+        padding: 0px 8px;
+   }
+
+   .card-container {
+        position: relative;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+   }
+
+   .card-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 346px;
+        min-height: 320px; 
+        padding: 8px 4px;
+        background-color: var(--color-white);
+        border: 2px solid var(--color-secondary);
+        border-radius: 16px;
+   }
+
+   .card-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 32px;
+   }
+
+   .card-item .card-item--title {
+         color: var(--color-black);
+         font-family: 'Anonymous Pro', monospace;
+         font-size: 1.25em;
+         font-weight: 700;
+         text-transform: uppercase;
+         margin-bottom: 1em;
+    }
+
+    .card-item p {
+        color: var(--color-black);
+        font-size: 0.87em;
+        font-weight: 400;
+        line-height: 1.5em;
+    }
+
+    
 
    
 
