@@ -358,12 +358,43 @@ html {
     .portfolio .title {
         margin-bottom: 40px;
     }
+
+    .portfolio-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portfolio-container .arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        width: 38px;
+        height: 38px;
+        background-color: rgb(101, 100, 100);
+        border-radius: 6px;
+        padding: 8px;
+        transform: translateY(-45%);
+    }
+
+    .portfolio-container .arrow:first-child {
+        left: 80px;
+    }
+
+    .portfolio-container .arrow:last-child {
+        right: 80px;
+    }
+
     .carousel {
         display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        max-width: 1200px;
+        transition: transform 0.3s ease-out;
     }
 
     .carousel-item {
-        width: 100%;
+        flex: 0 0 calc(100% / 3); /* Divide el ancho en tres partes iguales para tres elementos */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -395,6 +426,7 @@ html {
         height: 100%;
         object-fit: cover;
         transition: transform .3s ease-out;
+        
 
     }
 
