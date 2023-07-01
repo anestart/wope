@@ -45,8 +45,46 @@ html {
     header .logo {
         max-width: 110px;
     }
+    
+    header .navigation {
+        display: none;
+    }
 
-    header .menuToggle {
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 85px);
+        position: fixed;
+        top: 85px;
+        left: 0;
+        display: block;
+        background-color: var(--color-primary);
+    }
+
+    header .navigation li  {
+        list-style: none;
+        text-align: center;
+        margin-top: 64px;
+
+    }
+
+    header .navigation li a {
+        color: var(--color-black);
+        font-size: 1.25em;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    header .navigation li:not(:last-child) a:hover {
+        color: var(--color-secondary);
+        text-decoration: underline;
+    }
+
+    header .navigation .btn {
+        color: var(--color-white);
+    }
+
+
+    .menuToggle {
         position: relative;
         width: 40px;
         height: 40px;
@@ -54,11 +92,17 @@ html {
         background-size: 40px;
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
     }
 
-    header .navigation {
-        display: none;
+    .menuToggle.active {
+        background: url('./assets/icons/close.svg');
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
     }
+
 
     main {
         position: relative;
