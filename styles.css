@@ -29,7 +29,7 @@ html {
         top: 0;
         left: 0;
         width: 100%;
-        height: 85px;
+        /* height: 85px; */
         padding: 20px;
         z-index: 999;
         display: flex;
@@ -41,7 +41,7 @@ html {
     header.sticky {
         background-color: var(--color-white);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
-        padding: 20px;
+        padding: 10px 20px;
     }
 
     header .logo {
@@ -54,9 +54,9 @@ html {
 
     header .navigation.active {
         width: 100%;
-        height: calc(100% - 85px);
+        height: calc(100% - 69px);
         position: fixed;
-        top: 85px;
+        top: 69px;
         left: 0;
         display: block;
         background-color: var(--color-primary);
@@ -123,7 +123,6 @@ html {
         }
     }
 
-
     .menuToggle {
         position: relative;
         width: 40px;
@@ -184,6 +183,7 @@ html {
         background-color: var(--color-black);
         color: var(--color-white);
         padding: 24px 20px;
+        overflow: hidden;
     }
 
     .hero-container h1 {
@@ -210,14 +210,13 @@ html {
     }
 
     .btn {
-        font-size: 1em;
         color: var(--color-white);
         background: var(--color-secondary);
         display: inline-block;
         padding: 18px 26px;
         text-decoration: none;
         transition: 0.5s;
-        font-size: 0.87em;
+        font-size: 1em;
         font-weight: 700;
         line-height: 1.31em;
         letter-spacing: 0.05em;
@@ -694,20 +693,27 @@ html {
         cursor: pointer;
     }
 
-      
+    .firm {
+        width: 100%;
+        background-color: #f7f7f7;
+        color: #999;
+        text-align: center;
+    }
 
+    .firm p {
+        padding: 8px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+    }
 
-
-
-
-
-
-    
-
-    
-
-   
-
+    .firm p a  {
+        color: #999;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+    .firm p a:hover {
+        color: #170A01;
+    } 
     
 }
     
@@ -726,8 +732,91 @@ html {
     }
     
     @media all and (min-width: 768px){
-    /* md */
-    
+
+        .btn-wsp  {
+            width: 90px;
+            height: 90px;
+        }
+
+        .btn-wsp img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .hero-image img {
+            width: 85%;
+        } 
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 150px;
+        }
+
+        .hero-container h1 {
+            font-size: 2.2em;
+            line-height: 1em;
+            margin-bottom: 0.2em;
+        }
+
+        .hero-container h2 {
+            font-family: 'Anonymous Pro', monospace;
+            font-size: 1.25em;
+            margin-bottom: 1.1em;
+        }
+
+        .hero-container p {
+            font-size: 1em;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.6em;
+            margin-bottom: 3.12em;
+        }
+
+        .hero-container .circle-text {
+            width: 170px;
+            position: absolute;
+            height: auto;
+            bottom: 0%;
+            left: 580px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-media {
+            gap: 24px;
+        }
+
+        .mkt-banner {
+            flex-direction: row;
+            gap: 16px;
+            padding: 16px 24px;
+        }
+
+        .mkt-banner .mkt-banner--item p {
+            line-height: 1.3em;
+        }
+
+        .benefits p {
+            max-width: 600px;
+            font-size: 0.8em;
+        }
+
+        .services-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .offer-text h3 {
+            max-width: 500px;
+            line-height: 1.4em;
+        }
+
+        
+
+       
     }
     
     @media all and (min-width: 992px){

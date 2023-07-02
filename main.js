@@ -18,6 +18,13 @@ rightArrow.addEventListener('click', () => {
 
 
 
+window.addEventListener('scroll', function() {
+  var circleImg = document.querySelector('.circle-text');
+  var scrollPos = window.scrollY;
+  var rotation = scrollPos / 6; // Ajusta la velocidad de rotación cambiando el valor divisor
+  
+  circleImg.style.transform = 'rotate(' + rotation + 'deg)';
+});
 
 
 
