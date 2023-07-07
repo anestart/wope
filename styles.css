@@ -29,7 +29,6 @@ html {
         top: 0;
         left: 0;
         width: 100%;
-        /* height: 85px; */
         padding: 20px;
         z-index: 999;
         display: flex;
@@ -389,13 +388,13 @@ html {
         justify-content: center;
         align-items: center;
         gap: 40px;
+        flex-wrap: wrap;
     }
 
     .service-item {
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .service-item .content {
@@ -461,12 +460,12 @@ html {
         top: 30%;
         width: 38px;
         height: 38px;
-        background-color: var(--color-white);
+        background-color: var(--color-gray);
         border-radius: 6px;
         padding: 8px;
         transform: translateY(-30%);
         z-index: 10;
-        box-shadow: 0px 4px 8px 3px rgba(108,108,108,0.25);
+        box-shadow: 0px 4px 8px 3px rgba(108,108,108,0.15);
     }
 
     .portfolio-container .arrow:first-child {
@@ -731,7 +730,7 @@ html {
     
     }
     
-    @media all and (min-width: 768px){
+    @media all and (min-width: 768px) {
 
         .btn-wsp  {
             width: 90px;
@@ -791,8 +790,11 @@ html {
         .mkt-banner {
             flex-direction: row;
             gap: 16px;
-            padding: 16px 24px;
+            padding: auto;
+            justify-content: center;
+            align-items: center;
         }
+        
 
         .mkt-banner .mkt-banner--item p {
             line-height: 1.3em;
@@ -809,144 +811,329 @@ html {
             gap: 40px;
         }
 
+        .service-item {
+            height: 350px;
+        }
+
         .offer-text h3 {
             max-width: 500px;
             line-height: 1.4em;
         }
-
-        
-
-       
     }
     
     @media all and (min-width: 992px){
-    /* lg */
+
+        main {
+        background: linear-gradient(to right, var(--color-white) 0%, var(--color-white) 21%, var(--color-primary) 21%, var(--color-primary) 100%);
+        }
+
+        header {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            
+        }
+        
+        header.sticky {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+            padding: 10px 40px;
+        }
+        .menuToggle {
+            display: none;
+        }
+
+        
+        header .navigation {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .navigation li  {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-left: 40px;
+    
+        }
+    
+        header .navigation li a {
+            color: var(--color-black);
+            font-size: 1em;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 0.8px;
+        }
+        
+        
+
+
+    
+        .hero-banner {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            
+        }
+        .hero-image {
+            position: relative;
+            width: 60%;
+            height: auto;
+            height: 500px;
+        }
+        .hero-image img {
+            width: 60%;
+        }
+        .hero-container  {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            max-width: 510px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 24px 48px;
+            z-index: 1;
+            overflow: visible;
+        }
+
+        .hero-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 90px;
+            height: 100%;
+            background-color: rgba(136, 117, 232, 0.60);
+            z-index: -1;
+        }
+
+        .hero-container h1 {
+            margin-bottom: 0.3em;
+        }
+        .hero-container p {
+            text-align: left;
+        }
+        .hero-container .circle-text {
+            width: 145px;
+            position: absolute;
+            height: auto;
+            bottom: -1%;
+            left: 360px;
+            transition: transform 0.3s ease;
+        }
+
+       .hero-media {
+            position: absolute;
+            width: 10%;
+            left: 80%;
+            top: 440px;
+            display: flex;
+            gap: 4px;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .mkt-banner {
+            gap: 48px;
+        }
+
+
+
+        .title {
+            font-size: 2.5em;
+       }
+    
+       .benefits p {
+            font-size: 0.87em;
+       }
+    
+       .card-container {
+            position: relative;
+            margin-top: 32px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0 8px;
+       }
+
+       .services-container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 56px 16px;
+        }   
+
+        .portfolio {
+            padding: 40px 48px;
+        }
+
+        .portfolio-container {
+            padding: 0 88px;
+        }
+
+        .contact .contact-container {
+            flex-direction: row;
+            gap: 56px;
+        }
+
+        .contact .contact-container h4 {
+            max-width: 150px;
+            margin-bottom: 48px;
+            text-align: left;
+            line-height: 1.5em;
+        }
+
+      
+
+       
+        
+
+       
+
+       
+        
+        
     
     }
     
     @media all and (min-width: 1200px){
-    .portfolio {
-        position: relative;
-        padding: 40px 4px;
-    }
+
+        
+
+
+        .portfolio {
+            position: relative;
+            padding: 40px 4px;
+        }
     
-    .portfolio .title {
-        margin-bottom: 40px;
-    }
+        .portfolio .title {
+            margin-bottom: 40px;
+        }
 
-    .portfolio-container {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0 104px;
-    }
+        .portfolio-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 104px;
+        }
 
-    .portfolio-container .arrow {
-        cursor: pointer;
-        position: absolute;
-        top: 30%;
-        width: 38px;
-        height: 38px;
-        background-color: rgb(101, 100, 100);
-        border-radius: 6px;
-        padding: 8px;
-        transform: translateY(-30%);
-        z-index: 10;
-    }
+        .portfolio-container .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 30%;
+            width: 38px;
+            height: 38px;
+            background-color: var(--color-white);
+            border-radius: 6px;
+            padding: 8px;
+            transform: translateY(-30%);
+            z-index: 10;
+        }
 
-    .portfolio-container .arrow:first-child {
-        left: 80px;
-    }
+        .portfolio-container .arrow:first-child {
+            left: 80px;
+        }
 
-    .portfolio-container .arrow:last-child {
-        right: 80px;
-    }
+        .portfolio-container .arrow:last-child {
+             right: 80px;
+        }
 
-    .carousel {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none; /
-        -ms-overflow-style: none;
-        scroll-behavior: smooth;
-    }
+        .carousel {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+        }
 
 
-    .carousel::-webkit-scrollbar {
-         display: none; 
-    }
+         .carousel::-webkit-scrollbar {
+            display: none; 
+        }
 
-    .carousel-item {
-        scroll-snap-align: start;
-        flex: 0 0 calc(100% / 3); 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        scroll-snap-align: start;
-        transition: transform 0.5s ease;
-    }
+         .carousel-item {
+            scroll-snap-align: start;
+            flex: 0 0 calc(100% / 3); 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            scroll-snap-align: start;
+            transition: transform 0.5s ease;
+        }
     
-    .carousel-item h2 {
-        color: var(--color-black);
-        font-size: 1.38em;
-        font-weight: 700;
-        line-height: 1.9em;
-        margin: 24px 0;
-        text-align: center;
-    }
+         .carousel-item h2 {
+            color: var(--color-black);
+            font-size: 1.38em;
+            font-weight: 700;
+            line-height: 1.9em;
+            margin: 24px 0;
+            text-align: center;
+        }
 
-    .portfolio-card {
-        position: relative;
-        width: 100%;
-        max-width: 350px;
-        height: 220px;
-        overflow: hidden;
-    }
+        .portfolio-card {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: 220px;
+            overflow: hidden;
+        }
 
-    .portfolio-card img {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform .3s ease-out;
-    }
+        .portfolio-card img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s ease-out;
+        }
 
-    .portfolio-card .card-content {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        height: 75px;
-        padding: 8px 24px;
-        background-color: rgba(23, 10, 1, 0.60);
-        color: var(--color-white);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+        .portfolio-card .card-content {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: 75px;
+            padding: 8px 24px;
+            background-color: rgba(23, 10, 1, 0.60);
+            color: var(--color-white);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-    .portfolio-card .card-content p {
-        font-size: 0.9em;
-        font-weight: 600;
-        line-height: 1.5em;
-        letter-spacing: 0.5px;
-        padding: 4px;
-    }
+        .portfolio-card .card-content p {
+            font-size: 0.9em;
+            font-weight: 600;
+            line-height: 1.5em;
+            letter-spacing: 0.5px;
+            padding: 4px;
+        }
 
-    .portfolio-card:hover {
-        cursor: pointer;
-    }
+        .portfolio-card:hover {
+            cursor: pointer;
+        }
 
-    .portfolio-card:hover img {
-        transform: scale(1.1) rotate(-3deg);
-    }
+         .portfolio-card:hover img {
+             transform: scale(1.1) rotate(-3deg);
+        }
 
     .portfolio-card:hover .card-content {
         transform: translateY(20px);
         opacity: 0;
-    }
+        }
  
     
     }
