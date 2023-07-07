@@ -37,6 +37,9 @@ window.addEventListener('scroll', function() {
 
 function toggleMenu() {
   menuToggle.classList.toggle('active');
-  navigation.classList.toggle('active');
-  
+  if (window.innerWidth <= 992) {
+    navigation.classList.toggle('active');
+  } else {
+    navigation.classList.remove('active');
+  }
 }

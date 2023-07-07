@@ -57,7 +57,10 @@ html {
         position: fixed;
         top: 69px;
         left: 0;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         background-color: var(--color-primary);
     }
 
@@ -216,7 +219,7 @@ html {
         text-decoration: none;
         transition: 0.5s;
         font-size: 1em;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.31em;
         letter-spacing: 0.05em;
     }
@@ -853,6 +856,10 @@ html {
             align-items: center;
         }
 
+        header .navigation.active {
+            display: none;
+        }
+
         header .navigation li  {
             padding: 0;
             margin: 0;
@@ -868,10 +875,6 @@ html {
             text-decoration: none;
             letter-spacing: 0.8px;
         }
-        
-        
-
-
     
         .hero-banner {
             position: relative;
